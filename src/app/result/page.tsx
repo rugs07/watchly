@@ -62,9 +62,9 @@ function LoadingScreen() {
 function ResultContent() {
   const router = useRouter();
   const params = useSearchParams();
-  const mood   = (params.get("mood")   ?? "dark") as MoodKey;
-  const time   = (params.get("time")   ?? "60")   as TimeId;
-  const lang   = (params.get("lang")   ?? "hi")   as LangId;
+  const mood = (params.get("mood") ?? "dark") as MoodKey;
+  const time = (params.get("time") ?? "60") as TimeId;
+  const lang = (params.get("lang") ?? "hi") as LangId;
   const ratingParam = (params.get("rating") ?? "7") as RatingId;
 
   const minRating = RATING_OPTIONS.find((r) => r.id === ratingParam)?.min ?? 7;
@@ -89,7 +89,7 @@ function ResultContent() {
       gain.gain.setValueAtTime(0.07, ctx.currentTime);
       gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + dur);
       osc.start(); osc.stop(ctx.currentTime + dur);
-    } catch {}
+    } catch { }
   };
 
   useEffect(() => {
@@ -148,7 +148,7 @@ function ResultContent() {
     }
     beep(550, 0.1);
     const chosen = fresh[Math.floor(Math.random() * fresh.length)];
-    setUsedIds((prev) => new Set([...prev, chosen.id]));
+    setUsedIds((prev: Set<number>) => new Set([...prev, chosen.id]));
     setPick(chosen);
     setPoolExhausted(false);
   };
