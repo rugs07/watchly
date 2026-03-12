@@ -239,15 +239,15 @@ export default function RecommendationCard({
       >
         {/* Header */}
         <div className="text-center mb-6 sm:mb-8">
-          <p className="text-gray-500 tracking-widest mb-2" style={{ fontFamily: "var(--font-press-start)", fontSize: "8px" }}>
-            TONIGHT&apos;S PICK
+          <p className="text-gray-500 tracking-widest mb-2" style={{ fontFamily: "var(--font-press-start)", fontSize: "16px" }}>
+            Watchly&apos;S PICK
           </p>
-          <h2
+          {/* <h2
             className="text-4xl sm:text-5xl text-yellow-400"
             style={{ fontFamily: "var(--font-pacifico)", textShadow: "0 0 20px #FFD700, 0 0 40px #FFD70055" }}
           >
             {poolExhausted ? "🔄 Reshuffling..." : "🎮 Winner!"}
-          </h2>
+          </h2> */}
           {!poolExhausted && (
             <div className="flex justify-center gap-2 mt-3">
               {[...Array(5)].map((_, i) => (
@@ -414,7 +414,7 @@ export default function RecommendationCard({
               <span className="absolute inset-0 bg-cyan-400 transition-transform duration-200 origin-left scale-x-0 group-hover:scale-x-100" aria-hidden />
             )}
             <span className="relative z-10 group-hover:text-black transition-colors duration-200">
-              {poolExhausted ? "⏳ RESHUFFLING..." : "🎲 ROLL AGAIN"}
+              {poolExhausted ? "⏳ RESHUFFLING..." : "⚡ NEXT PICK"}
             </span>
           </button>
 
@@ -428,7 +428,7 @@ export default function RecommendationCard({
         </div>
 
         <p className="text-center mt-8 sm:mt-10 text-gray-800 text-xs" style={{ fontFamily: "var(--font-vt323)" }}>
-          TONIGHT WATCH v1.0 — POWERED BY TMDB — HINDI OTT EDITION
+          Watchly v1.0 — POWERED BY TMDB — HINDI OTT EDITION
         </p>
       </div>
     </>

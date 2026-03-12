@@ -10,11 +10,11 @@ export default function Header({ subtitle = "Find something to watch in under 10
       <h1
         className="text-5xl md:text-7xl mb-3 text-yellow-400"
         style={{
-          fontFamily: "var(--font-pacifico)",
+          fontFamily: "var(--font-vt323)",
           textShadow: "0 0 20px #FFD700, 0 0 40px #FFD70066",
         }}
       >
-        Tonight Watch
+        Watchly
       </h1>
       <p
         className="text-green-400 text-lg md:text-xl tracking-widest uppercase"

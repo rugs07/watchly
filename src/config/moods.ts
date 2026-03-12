@@ -13,7 +13,7 @@ export const MOOD_CONFIG: Record<MoodKey, MoodConfig> = {
   funny: {
     genres: [35],
     label: "Funny / Comedy",
-    emoji: "😄",
+    emoji: "",
     desc: "Light comedy shows to relax",
     color: "#FFD700",
     glow: "#FFD70055",
@@ -21,7 +21,7 @@ export const MOOD_CONFIG: Record<MoodKey, MoodConfig> = {
   dark: {
     genres: [80, 9648],
     label: "Dark / Thriller",
-    emoji: "🔪",
+    emoji: "",
     desc: "Gripping crime & suspense",
     color: "#FF4444",
     glow: "#FF444455",
@@ -29,7 +29,7 @@ export const MOOD_CONFIG: Record<MoodKey, MoodConfig> = {
   smart: {
     genres: [9648, 10765],
     label: "Smart / Mystery",
-    emoji: "🧠",
+    emoji: "",
     desc: "Mind-bending plots & twists",
     color: "#00FFFF",
     glow: "#00FFFF55",
@@ -37,7 +37,7 @@ export const MOOD_CONFIG: Record<MoodKey, MoodConfig> = {
   light: {
     genres: [10751, 18],
     label: "Light / Feel Good",
-    emoji: "🌸",
+    emoji: "",
     desc: "Warm, feel-good family stories",
     color: "#00FF88",
     glow: "#00FF8855",
@@ -45,7 +45,7 @@ export const MOOD_CONFIG: Record<MoodKey, MoodConfig> = {
   emotional: {
     genres: [18, 10749],
     label: "Emotional / Drama",
-    emoji: "💔",
+    emoji: "",
     desc: "Deep, heartfelt human stories",
     color: "#FF69B4",
     glow: "#FF69B455",

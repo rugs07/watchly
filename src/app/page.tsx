@@ -87,34 +87,34 @@ function GlitchTitle() {
             className="absolute inset-0 text-red-500"
             aria-hidden
             style={{
-              fontFamily: "var(--font-pacifico)",
+              fontFamily: "var(--font-vt323)",
               fontSize: "clamp(3rem, 10vw, 6rem)",
               transform: "translate(-3px, 1px)",
               opacity: 0.7,
               mixBlendMode: "screen",
             }}
           >
-            Tonight Watch
+            Watchly
           </span>
           <span
             className="absolute inset-0 text-cyan-400"
             aria-hidden
             style={{
-              fontFamily: "var(--font-pacifico)",
+              fontFamily: "var(--font-vt323)",
               fontSize: "clamp(3rem, 10vw, 6rem)",
               transform: "translate(3px, -1px)",
               opacity: 0.7,
               mixBlendMode: "screen",
             }}
           >
-            Tonight Watch
+            Watchly
           </span>
         </>
       )}
       <h1
         className="text-yellow-400 relative z-10"
         style={{
-          fontFamily: "var(--font-pacifico)",
+          fontFamily: "var(--font-vt323)",
           fontSize: "clamp(3rem, 10vw, 6rem)",
           textShadow: glitching
             ? "0 0 40px #FF0000, 0 0 80px #00FFFF44"
@@ -122,7 +122,7 @@ function GlitchTitle() {
           transition: "text-shadow 0.05s",
         }}
       >
-        Tonight Watch
+        Watchly
       </h1>
     </div>
   );
@@ -296,7 +296,7 @@ function CoinScreen({ onStart }: { onStart: () => void }) {
         {/* TV icon with CRT glow */}
         <div
           className="mb-6 md:mb-8 relative"
-          style={{ animation: "float 3.5s ease-in-out infinite" }}
+          // style={{ animation: "float 3.5s ease-in-out infinite" }}
         >
           <div
             className="text-6xl sm:text-7xl md:text-8xl"
@@ -406,7 +406,7 @@ function CoinScreen({ onStart }: { onStart: () => void }) {
       {/* <div className="relative z-30 pb-4 pt-3 flex flex-wrap gap-4 sm:gap-8 justify-center text-gray-800"
         style={{ fontFamily: "var(--font-vt323)", fontSize: "13px" }}
       >
-        <span>© 2024 TONIGHT WATCH</span>
+        <span>© 2024 Watchly</span>
         <span>HIGH SCORE: ∞</span>
         <span>CREDITS: 1</span>
         <span>POWERED BY TMDB</span>
@@ -484,11 +484,11 @@ export default function Home() {
           <h1
             className="text-3xl sm:text-4xl md:text-5xl text-yellow-400 mb-2"
             style={{
-              fontFamily: "var(--font-pacifico)",
+              fontFamily: "var(--font-vt323)",
               textShadow: "0 0 16px #FFD700, 0 0 32px #FFD70055",
             }}
           >
-            Tonight Watch
+            Watchly
           </h1>
           <p
             className="text-green-400 tracking-widest"
