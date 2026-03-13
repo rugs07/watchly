@@ -241,9 +241,9 @@ function VHSNoise() {
 // ─── STAT COUNTERS ────────────────────────────────────────────────────────────
 function StatBar() {
   const stats = [
-    { label: "SHOWS IN DB",  value: "500+" },
-    { label: "OTT PLATFORMS", value: "8"   },
-    { label: "MOODS",         value: "5"   },
+    { label: "SHOWS IN DB", value: "500+" },
+    { label: "OTT PLATFORMS", value: "8" },
+    { label: "MOODS", value: "5" },
     { label: "AVG PICK TIME", value: "<10s" },
   ];
   return (
@@ -296,7 +296,7 @@ function CoinScreen({ onStart }: { onStart: () => void }) {
         {/* TV icon with CRT glow */}
         <div
           className="mb-6 md:mb-8 relative"
-          // style={{ animation: "float 3.5s ease-in-out infinite" }}
+        // style={{ animation: "float 3.5s ease-in-out infinite" }}
         >
           <div
             className="text-6xl sm:text-7xl md:text-8xl"
@@ -383,7 +383,7 @@ function CoinScreen({ onStart }: { onStart: () => void }) {
               aria-hidden
             />
             <span className="relative z-10 group-hover:text-black transition-colors duration-200">
-              ► PRESS START ◄
+              ► START ◄
             </span>
           </button>
         </div>
@@ -442,12 +442,12 @@ export default function Home() {
       gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.current.currentTime + dur);
       osc.start();
       osc.stop(audioCtx.current.currentTime + dur);
-    } catch {}
+    } catch { }
   }, []);
 
-  const handleMood   = (m: MoodKey)  => { beep(660, 0.1); setMood(m);   if (step < 1) setStep(1); };
-  const handleTime   = (t: TimeId)   => { beep(770, 0.1); setTime(t);   if (step < 2) setStep(2); };
-  const handleLang   = (l: LangId)   => { beep(880, 0.1); setLang(l);   if (step < 3) setStep(3); };
+  const handleMood = (m: MoodKey) => { beep(660, 0.1); setMood(m); if (step < 1) setStep(1); };
+  const handleTime = (t: TimeId) => { beep(770, 0.1); setTime(t); if (step < 2) setStep(2); };
+  const handleLang = (l: LangId) => { beep(880, 0.1); setLang(l); if (step < 3) setStep(3); };
   const handleRating = (r: RatingId) => { beep(990, 0.1); setRating(r); if (step < 4) setStep(4); };
 
   const allSelected = mood && time && lang && rating;

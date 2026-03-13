@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Watchly — Hindi Web Series Oracle",
+  title: "Watchly - Hindi Web Series Oracle",
   description:
     "Find the perfect Hindi web series to watch tonight in under 10 seconds.",
   keywords: [
@@ -16,13 +17,16 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Watchly" }],
   creator: "Watchly",
-  metadataBase: new URL("https://tonight-watch.vercel.app/"), 
+  metadataBase: new URL("https://watchly.rugwed.in"),
+  alternates: {
+    canonical: "/",
+  },
 
   openGraph: {
-    title: "Watchly — Hindi Web Series Oracle",
+    title: "Watchly - Hindi Web Series Oracle",
     description:
       "Stop scrolling OTT apps. Find the perfect Hindi web series in under 10 seconds.",
-    url: "https://tonight-watch.vercel.app/",
+    url: "https://watchly.rugwed.in/",
     siteName: "Watchly",
     images: [
       {
@@ -46,8 +50,8 @@ export const metadata: Metadata = {
 
   icons: {
     icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
   },
 
   robots: {
@@ -69,6 +73,25 @@ export default function RootLayout({
         <link
           href="https://fonts.googleapis.com/css2?family=Pacifico&family=Press+Start+2P&family=VT323&display=swap"
           rel="stylesheet"
+        />
+        {/* Google Analytics Tag */}
+        <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=G-GPEQVCRC4N`}
+        />
+        <Script
+          id="gtag-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-GPEQVCRC4N', {
+                page_path: window.location.pathname,
+              });
+            `,
+          }}
         />
       </head>
       <body className="bg-arcade-bg min-h-screen antialiased">{children}</body>
